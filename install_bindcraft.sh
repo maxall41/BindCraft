@@ -45,7 +45,7 @@ echo "CUDA version (if provided): $cuda"
 SECONDS=0
 
 # set paths
-install_dir=$(pwd)
+install_dir=/root/bindcraft/
 
 ### BindCraft install
 printf "Installing BindCraft environment\n"
@@ -70,10 +70,6 @@ tar -xvf ${install_dir}/params/alphafold_params_2022-12-06.tar
 # chmod executables
 chmod +x ${install_dir}/functions/dssp
 chmod +x ${install_dir}/functions/DAlphaBall.gcc
-
-# finish
-conda deactivate
-printf "BindCraft environment installed\n"
 
 ############################################################################################################
 ############################################################################################################
