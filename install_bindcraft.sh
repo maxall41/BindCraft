@@ -49,10 +49,7 @@ install_dir=$(pwd)
 
 ### BindCraft install
 printf "Installing BindCraft environment\n"
-$pkg_manager create --name BindCraft python=3.10 -y
 CONDA_BASE=$(conda info --base)
-source ${CONDA_BASE}/bin/activate ${CONDA_BASE}/envs/BindCraft
-printf "BindCraft environment activated at ${CONDA_BASE}/envs/BindCraft"
 
 # install required packages
 if [ -n "$cuda" ]; then
