@@ -49,7 +49,6 @@ install_dir=/root/bindcraft/
 
 ### BindCraft install
 printf "Installing BindCraft environment\n"
-CONDA_BASE=$(conda info --base)
 
 # install required packages
 if [ -n "$cuda" ]; then
@@ -59,6 +58,7 @@ else
 fi
 
 # install ColabDesign
+printf "Installing ColabDesign"
 pip3 install git+https://github.com/sokrypton/ColabDesign.git --no-deps
 
 # Download AlphaFold2 weights
